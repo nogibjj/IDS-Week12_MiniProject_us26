@@ -1,68 +1,49 @@
-## Python script that interacts with a SQL database.
-
-[![SQL CI/CD](https://github.com/nogibjj/IDS-Week5_MiniProject_us26/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/IDS-Week5_MiniProject_us26/actions/workflows/cicd.yml)
-
-<p align="center">
-  <img width="600" src="https://github.com/nogibjj/IDS-Week5_MiniProject_us26/blob/main/images/schema.png" alt="schema">
-</p>
+## MLflow to manage a simple machine learning project
 
 
 ### Overview
 
-This repo has been created by forked from (https://github.com/nogibjj/sqlite-lab). I have used world university ranking csv file and loaded it into 'ranking.db' database under the table name 'universities'. Using **CRUD** operation to interacts with a SQL database.
+1. **Logging Parameters, Metrics, and a Model**:
+   - Capturing parameters, metrics, and models is fundamental in MLflow. It involves recording input settings, performance metrics, and the model itself during the experimentation and training phases.
 
-Here is an overview of CRUD operations:
-		
-  CRUD stands for Create, Read, Update, and Delete, which are the four basic operations for managing data in a database or data storage system. These operations are essential for interacting with and manipulating data within an application or database. Here's a brief overview of each CRUD operation:
+2. **Understanding the MLflow Fluent API**:
+   - The MLflow fluent API provides a user-friendly interface to log and organize machine learning experiments. It simplifies the process of tracking parameters, metrics, and model versions throughout the development lifecycle.
 
-1. **Create (C)**:
-   - Create is the operation used to add new data or records to a database.
-   - It typically involves inserting a new row or document into a database table or collection.
-   - In SQL, you use the `INSERT INTO` statement to create new records in a table.
-   - In NoSQL databases, you often use methods like `insertOne` or `insertMany` to add documents to a collection.
+3. **Registering a Model While Logging**:
+   - When logging information with MLflow, you can simultaneously register the resulting model. This registration step allows for easy access and management of different model versions within the MLflow environment.
 
-2. **Read (R)**:
-   - Read is the operation used to retrieve data from a database.
-   - It involves querying the database to fetch existing records based on specific criteria.
-   - In SQL, you use the `SELECT` statement to read data from a table.
-   - In NoSQL databases, you use various query methods to retrieve documents that match your criteria.
+4. **Navigating to a Model in the MLflow UI**:
+   - Within the MLflow user interface, accessing logged models is straightforward. You can locate and explore the registered models using the UI, allowing for visualization and comparison of different model versions and their associated metadata.
 
-3. **Update (U)**:
-   - Update is the operation used to modify existing data in a database.
-   - It typically involves changing the values of one or more fields in an existing record.
-   - In SQL, you use the `UPDATE` statement to update data in a table.
-   - In NoSQL databases, you use methods like `updateOne` or `updateMany` to modify documents in a collection.
-
-4. **Delete (D)**:
-   - Delete is the operation used to remove data from a database.
-   - It can involve deleting specific records or entire rows from a table.
-   - In SQL, you use the `DELETE` statement to remove data from a table.
-   - In NoSQL databases, you use methods like `deleteOne` or `deleteMany` to delete documents from a collection.
+5. **Loading a Logged Model for Inference**:
+   - Utilizing MLflow, you can retrieve and load a logged model effortlessly for inference tasks. MLflow provides functionalities to access these models programmatically, making it convenient to deploy and use models for predictions or further analysis.
 
 
 ### Code Description
+1. Install Mlflow
+      - pip install mlflow
 
-1. create.py
-    This script is used for load and transform. A databased called 'ranking.db' with a table named 'universities' is created and a csv file is loaded into that table.
-2. read.py
-    This script is used to interact with the SQL database. The queries used are :
-    - SELECT "Name of University" FROM universities WHERE
-      "Location" == "United States"
-    - SELECT "Name of University", "No of student per staff" FROM
-      universities WHERE "No of student per staff" > 40.0
-    - SELECT "Name of University", "No of student per staff" FROM
-        universities WHERE ("No of student per staff" < 40.0) AND ("Location" == "Canada")
-3. update.py
-    Updating of tuple values already present in the table.
+2. Start a Tracking Server
+      - mlflow server --host 127.0.0.1 --port 8080
 
-4. delete.py
-    Deletion of data present in the table. The query used is :
-      DELETE FROM universities WHERE "Industry Income Score" < 90.0
+<p align="center">
+  <img width="600" src="https://github.com/nogibjj/IDS-Week12_MiniProject_us26/blob/main/images/1.png" alt="1">
+</p>	
 
-6. test_graph.py
-    ** pd.read_sql_query **  is used for creating visualisation.
-    It is a function used to read SQL query or database table into DataFrame.
+3. Train a model and prepare metadata for logging
+
+  main.ipynb has the code for Load and prepare the Iris dataset for modeling. Training a Logistic Regression model and evaluate its performance. Preparing the model hyperparameters and calculate metrics for logging.
    
+4. Log the model and its metadata to MLflow
+  Start by initializing an MLflow run context to begin a fresh run, aiming to log both the model and its associated metadata.
+
+  Next, record the model parameters and performance metrics within this run context to ensure comprehensive tracking.
+
+  Tag this run to facilitate its easy retrieval and identification for future reference.
+
+  Simultaneously with logging the model, register it in the MLflow Model Registry, ensuring that while saving the model data, it's also cataloged within the registry for streamlined management and access.
+
+
 6. Makefile with the following:
 
 	- install: using requirements.txt file to install required packages
@@ -94,8 +75,7 @@ Here is an overview of CRUD operations:
   <img width="600" src="https://github.com/nogibjj/IDS-Week5_MiniProject_us26/blob/main/images/ci_cd.png" alt="cicd">
 </p>
 
-## Visualization 
-#### Visualization Created using sql database using pandas.read_sql_query (https://pandas.pydata.org/docs/reference/api/pandas.read_sql_query.html)
+## Visualization
 
 ##### Count of top universities vs mean industry income score 
 

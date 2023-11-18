@@ -19,4 +19,4 @@ pandas
 kaleido
 pyarrow
 ruff
-polars
+mlflow
