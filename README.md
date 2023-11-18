@@ -7,16 +7,13 @@
 1. **Logging Parameters, Metrics, and a Model**:
    - Capturing parameters, metrics, and models is fundamental in MLflow. It involves recording input settings, performance metrics, and the model itself during the experimentation and training phases.
 
-2. **Understanding the MLflow Fluent API**:
-   - The MLflow fluent API provides a user-friendly interface to log and organize machine learning experiments. It simplifies the process of tracking parameters, metrics, and model versions throughout the development lifecycle.
-
-3. **Registering a Model While Logging**:
+2. **Registering a Model While Logging**:
    - When logging information with MLflow, you can simultaneously register the resulting model. This registration step allows for easy access and management of different model versions within the MLflow environment.
 
-4. **Navigating to a Model in the MLflow UI**:
+3. **Navigating to a Model in the MLflow UI**:
    - Within the MLflow user interface, accessing logged models is straightforward. You can locate and explore the registered models using the UI, allowing for visualization and comparison of different model versions and their associated metadata.
 
-5. **Loading a Logged Model for Inference**:
+4. **Loading a Logged Model for Inference**:
    - Utilizing MLflow, you can retrieve and load a logged model effortlessly for inference tasks. MLflow provides functionalities to access these models programmatically, making it convenient to deploy and use models for predictions or further analysis.
 
 
@@ -41,13 +38,6 @@
   <img width="600" src="https://github.com/nogibjj/IDS-Week12_MiniProject_us26/blob/main/images/3.png" alt="3">
 </p>	
 
-  Start by initializing an MLflow run context to begin a fresh run, aiming to log both the model and its associated metadata.
-
-  Next, record the model parameters and performance metrics within this run context to ensure comprehensive tracking.
-
-  Tag this run to facilitate its easy retrieval and identification for future reference.
-
-  Simultaneously with logging the model, register it in the MLflow Model Registry, ensuring that while saving the model data, it's also cataloged within the registry for streamlined management and access.
 
 5. mlartifacts and mlruns
 
