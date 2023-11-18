@@ -1,4 +1,4 @@
-name: SQL CI/CD
+name: MLflow
 
 on:
   push:
@@ -22,23 +22,3 @@ jobs:
       run: make format
     - name: Lint
       run: make lint
-    - name: run python script to create summary report
-      run: python main.py
-    - name: run python script to create output graph
-      run : python test_graph.py
-    - name: Archive and Upload Artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: ml_pipeline-artifacts
-        path: ${{ github.workspace }}
-        
-    - name: Save to repository
-      env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      run: |
-        echo GH_TOKEN: "${GH_TOKEN}"
-        git config --global user.name 'github-actions'
-        git config --local user.email "action@github.com"
-        git add .
-        git commit -m "Add results"
-        git push
