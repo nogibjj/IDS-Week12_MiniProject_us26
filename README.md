@@ -75,40 +75,6 @@
 
 All the necessary information related to model is stored and visualised from this UI.
 
-
-7. Makefile with the following:
-
-	- install: using requirements.txt file to install required packages
-
-	- test:
-
-	python -m pytest -vv --cov=main *.py
-<p align="center">
-  <img width="600" src="https://github.com/nogibjj/IDS-Week5_MiniProject_us26/blob/main/images/test.png" alt="install">
-</p>
-
-	- format: using black formatter
-
-<p align="center">
-  <img width="600" src="https://github.com/nogibjj/IDS-Week5_MiniProject_us26/blob/main/images/format.png" alt="format">
-</p>
-
-      - lint: using ruff 
-
-<p align="center">
-  <img width="600" src="https://github.com/nogibjj/IDS-Week5_MiniProject_us26/blob/main/images/lint.png" alt="lint">
-</p>	
-
-7.Created GitHub Actions that performs all four Makefile commands with badges for each one in the README.md
-
-##### Action include the general CI/CD process in test.yml file, which automatically generate the graph and markdown
-
-<p align="center">
-  <img width="600" src="https://github.com/nogibjj/IDS-Week5_MiniProject_us26/blob/main/images/ci_cd.png" alt="cicd">
-</p>
-
-## Visualization
-
 ##### Count of top universities vs mean industry income score 
 
 <p align="center">
