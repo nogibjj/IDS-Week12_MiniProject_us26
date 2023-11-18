@@ -38,21 +38,7 @@
   <img width="600" src="https://github.com/nogibjj/IDS-Week12_MiniProject_us26/blob/main/images/3.png" alt="3">
 </p>	
 
-
-5. mlartifacts and mlruns
-
-  These folders get created after successful run of main.ipynb file. The artifacts folder contains requirements.txt, yaml file and the unique runid associated with that model and it's unique hyperparameters.
-
-  The mlruns contains the logging info such as accuracy metric , hyperparaameters used and a few more meta data.
-
-  This is how we can keep a track of every ml model which was run and can be tracked back in managaing.
-
-
-<p align="center">
-  <img width="600" src="https://github.com/nogibjj/IDS-Week12_MiniProject_us26/blob/main/images/2.png" alt="2">
-</p>	
-
-6 Running **!mlflow ui** command 
+5. Running **!mlflow ui** command 
  The MLflow Tracking component is an API and UI for logging parameters, code versions, metrics, and output files when running your machine learning code and for later visualizing the results.
 
 <p align="center">
@@ -65,3 +51,18 @@
 </p>	
 
 All the necessary information related to model is stored and visualised from this UI.
+
+
+
+6. mlartifacts and mlruns
+
+  These folders get created after successful run of main.ipynb file. The artifacts folder contains requirements.txt, yaml file and the unique runid associated with that model and it's unique hyperparameters.
+
+  The mlruns contains the logging info such as accuracy metric , hyperparaameters used and a few more meta data.
+
+  This is how we can keep a track of every ml model which was run and can be tracked back in managaing.
+
+
+<p align="center">
+  <img width="600" src="https://github.com/nogibjj/IDS-Week12_MiniProject_us26/blob/main/images/2.png" alt="2">
+</p>	
