@@ -1,5 +1,6 @@
 ## MLflow to manage a simple machine learning project
 
+[![MLflow](https://github.com/nogibjj/IDS-Week12_MiniProject_us26/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/IDS-Week12_MiniProject_us26/actions/workflows/cicd.yml) 
 
 ### Overview
 
