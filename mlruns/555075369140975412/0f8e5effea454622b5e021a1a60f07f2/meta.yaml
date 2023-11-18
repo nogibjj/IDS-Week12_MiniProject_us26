@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/555075369140975412/0f8e5effea454622b5e021a1a60f07f2/artifacts
+end_time: 1700347961841
+entry_point_name: ''
+experiment_id: '555075369140975412'
+lifecycle_stage: active
+run_id: 0f8e5effea454622b5e021a1a60f07f2
+run_name: redolent-gnat-752
+run_uuid: 0f8e5effea454622b5e021a1a60f07f2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1700347958707
+status: 3
+tags: []
+user_id: vscode

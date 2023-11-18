@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1700347961837
+current_stage: None
+description: ''
+last_updated_timestamp: 1700347961837
+name: Week12-Mlflow
+run_id: 0f8e5effea454622b5e021a1a60f07f2
+run_link: ''
+source: mlflow-artifacts:/555075369140975412/0f8e5effea454622b5e021a1a60f07f2/artifacts/iris_model
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/555075369140975412/0f8e5effea454622b5e021a1a60f07f2/artifacts/iris_model
+user_id: null
+version: 1

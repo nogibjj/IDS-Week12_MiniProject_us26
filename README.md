@@ -35,6 +35,11 @@
   main.ipynb has the code for Load and prepare the Iris dataset for modeling. Training a Logistic Regression model and evaluate its performance. Preparing the model hyperparameters and calculate metrics for logging.
    
 4. Log the model and its metadata to MLflow
+
+<p align="center">
+  <img width="600" src="https://github.com/nogibjj/IDS-Week12_MiniProject_us26/blob/main/images/3.png" alt="3">
+</p>	
+
   Start by initializing an MLflow run context to begin a fresh run, aiming to log both the model and its associated metadata.
 
   Next, record the model parameters and performance metrics within this run context to ensure comprehensive tracking.
@@ -43,8 +48,35 @@
 
   Simultaneously with logging the model, register it in the MLflow Model Registry, ensuring that while saving the model data, it's also cataloged within the registry for streamlined management and access.
 
+5. mlartifacts and mlruns
 
-6. Makefile with the following:
+  These folders get created after successful run of main.ipynb file. The artifacts folder contains requirements.txt, yaml file and the unique runid associated with that model and it's unique hyperparameters.
+
+  The mlruns contains the logging info such as accuracy metric , hyperparaameters used and a few more meta data.
+
+  This is how we can keep a track of every ml model which was run and can be tracked back in managaing.
+
+
+<p align="center">
+  <img width="600" src="https://github.com/nogibjj/IDS-Week12_MiniProject_us26/blob/main/images/2.png" alt="2">
+</p>	
+
+6 Running **!mlflow ui** command 
+ The MLflow Tracking component is an API and UI for logging parameters, code versions, metrics, and output files when running your machine learning code and for later visualizing the results.
+
+<p align="center">
+  <img width="600" src="https://github.com/nogibjj/IDS-Week12_MiniProject_us26/blob/main/images/4.png" alt="2">
+</p>	
+
+
+<p align="center">
+  <img width="600" src="https://github.com/nogibjj/IDS-Week12_MiniProject_us26/blob/main/images/5.png" alt="2">
+</p>	
+
+All the necessary information related to model is stored and visualised from this UI.
+
+
+7. Makefile with the following:
 
 	- install: using requirements.txt file to install required packages
 
