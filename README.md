@@ -75,9 +75,3 @@
 </p>	
 
 All the necessary information related to model is stored and visualised from this UI.
-
-##### Count of top universities vs mean industry income score 
-
-<p align="center">
-  <img width="600" src="https://github.com/nogibjj/IDS706-Individual_Project_1_us26/blob/main/output_graph/visualization.png" alt="visualization">
-</p>	
